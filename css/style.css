@@ -8,6 +8,7 @@ body {
 	background-size: cover;
 	margin: 0;
 	font-family: Arial, "Microsoft YaHei", sans-serif;
+	background-color: #81D0F7;
 }
 
 header {
@@ -212,7 +213,7 @@ article p {
 	line-height: 30px;
 	text-align: justify;
 	font-size: 18px;
-	letter-spacing: 0.02em;
+	/* letter-spacing: 0.01em; */
 	color: #444;
 }
 
