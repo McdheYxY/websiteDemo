@@ -19,7 +19,7 @@ header {
 	left: 0;
 	position: fixed;
 	border-radius: 0 0 15px 15px;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);	
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 	z-index: 1;
 }
 
@@ -44,41 +44,68 @@ header img {
 	margin: 10px;
 }
 
-header .menu {
+
+
+/* 移动端导航栏  */
+header .outmenu {
 	display: none;
+	position: relative;
+	top: -75px;
+	left: 0;
 }
 
-header .zhezhao {
-	overflow: hidden;
-	height: 0;
-	background-color: white;
-	transform: scale(0);
-	transition: 0.2s ease;
+header .inmenu {
+	opacity: 0;
+	visibility: hidden;
 	position: absolute;
 	top: 0;
-	border-radius: 90px;
-	z-index: -1;
-}
-
-header .nav {
+	left: 0;
+	width: 100vw;
 	height: 0;
-	overflow: hidden;
-	opacity: 0.6;
+	background-color: white;
+	z-index: -1;
+	padding-top: 75px;
+	transition:opacity 0.2s ease;
+	transition:height 0.2s ease;
 }
 
+header #menu {
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin: 12.5px 20px;
+	border-radius: 90px;
+	float: left;
+	appearance: none;
+	background-color: #81D0F7;
+	background-image: url(../images/menu.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30px 30px;
+}
 
+header #menu:checked {
+	background-image: url(../images/close.png);
+}
 
+header #menu:checked~.inmenu {
+	visibility: visible;
+	position: absolute;
+	opacity: 1;
+	top: 0;
+	height: 100vh;
+}
 
-header .nav ul {
+header .inmenu ul {
 	padding: 0;
 }
 
-header .nav li {
+header .inmenu li {
 	
 	list-style: none;
 }
 
-header .nav a {
+header .inmenu a {
 	display: block;
 	width: 100%;
 	height: 60px;
@@ -88,13 +115,15 @@ header .nav a {
 	line-height: 60px;
 	font-size: 18px;
 }
-header .nav a:hover {
+header .inmenu a:hover {
 	color: white;
 	background-color: #ADE1F5;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+} 
 
 
+
+/* 电脑端导航栏 */
 nav {
 	width: 224px;
 	height: 345px;
@@ -132,32 +161,30 @@ nav li:hover {
 	height: 94px;
 }
 
-/* nav .seleted{
-				height: 94px;
-			}
-			 */
 nav :not(:hover) li.seleted {
 	height: 94px;
 }
 
-nav a{
+nav a {
 	text-decoration: none;
-	color:#444;
+	color: #444;
 	font-size: 16px;
 }
 
 nav .title {
 	padding-left: 45px;
 	background-repeat: no-repeat;
-	background-position: 5px center; 
+	background-position: 5px center;
 	background-size: 22px 22px;
 }
-nav .bignav{
+
+nav .bignav {
 	height: 40px;
 	margin-bottom: 16px;
 	line-height: 40px;
 }
-nav .smallnav{
+
+nav .smallnav {
 	height: 54px;
 	text-align: center;
 }
@@ -165,22 +192,30 @@ nav .smallnav{
 nav .bignav:hover {
 	text-decoration: underline;
 }
-nav .smallnav a:hover{
+
+nav .smallnav a:hover {
 	font-weight: bold;
 }
-.circle{
+
+.circle {
 	background: url(../images/Circle.png);
 }
-.hexagon{
+
+.hexagon {
 	background: url(../images/Hexagon.png);
 }
-.rhombus{
+
+.rhombus {
 	background: url(../images/Rhombus.png);
 }
-.triangle{
+
+.triangle {
 	background: url(../images/Triangle.png);
 }
 
+
+
+/* 内容区域 */
 .main-content {
 	margin: 0 auto;
 	margin-left: 264px;
@@ -231,6 +266,9 @@ article ul {
 	padding-left: 25px;
 }
 
+
+
+/* 返回顶部 */
 .top {
 	display: block;
 	width: 50px;
@@ -248,6 +286,8 @@ article ul {
 }
 
 
+
+/* 底部版权 */
 footer {
 	background-color: #333;
 	color: rgba(255, 255, 255, 0.7);
@@ -256,55 +296,25 @@ footer {
 	font-size: 12.7px;
 }
 
-@media only screen and (max-width:850px) {
-	body {
-		/* background-image: linear-gradient(red,blue); */
-	}
 
+
+/* 响应式布局 */
+@media only screen and (max-width:850px) {
 	nav {
 		display: none;
 	}
-
+	
 	.main-content {
 		margin: 0 10px;
 		margin-top: 95px;
 		margin-bottom: 20px;
 	}
-
-	header .menu {
-		display: block;
-		height: 50px;
-		width: 50px;
-		margin: 10px 20px;
-		border-radius: 90px;
-		float: left;
-		appearance: none;
-		background-color: #81D0F7;
-		background-image: url(../images/menu.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: 30px 30px;
-	}
-
-	header .menu:checked {
-		background-image: url(../images/close.png);
-	}
-
-
-
-	header .menu:checked~.zhezhao {
-		position: absolute;
-		top: 0;
-		transform: scale(250);
-		width: 10px;
-		height: 10px;
 	
+	
+	article p {
+		font-size: 16px;
 	}
-
-	header .menu:checked~.nav {
+	header .outmenu {
 		display: block;
-		opacity: 1;
-		width: 100%;
-		height: 100vh;
 	}
 }
