@@ -146,16 +146,22 @@ nav a{
 	font-size: 16px;
 }
 
-nav .bignav {
-	display: block;
-	width: 184px;
-	height: 40px;
-	padding-top: 16px;
+nav .title {
 	padding-left: 45px;
 	background-repeat: no-repeat;
 	background-position: 5px center; 
-	background-size: 30px 30px;
+	background-size: 22px 22px;
 }
+nav .bignav{
+	height: 40px;
+	margin-bottom: 16px;
+	line-height: 40px;
+}
+nav .smallnav{
+	height: 54px;
+	text-align: center;
+}
+
 nav .bignav:hover {
 	text-decoration: underline;
 }
@@ -244,9 +250,10 @@ article ul {
 
 footer {
 	background-color: #333;
-	color: white;
+	color: rgba(255, 255, 255, 0.7);
 	text-align: center;
 	padding: 30px;
+	font-size: 12.7px;
 }
 
 @media only screen and (max-width:850px) {
