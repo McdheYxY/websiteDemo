@@ -121,8 +121,62 @@ header .inmenu a:hover {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 } 
 
+/* 个性化描述 */
+.desc{
+	width: 224px;
+	margin: 20px;
+	border-radius: 6px;
+	padding: 4px 0;
+	right: 0;
+	top: 10%;
+	position: fixed;
+}
+.desc p{
+	padding: 0;
+	margin: 0;
+	text-indent: 1.5em;
+	font-size: 14px;
+}
+.desc .tou{
+	width: 184px;
+	height: 184px;
+	margin: 20px;
+	border-radius: 90px;
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
 
+.desc .ls,.desc .tags{
+	width: 224px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	padding: 16px;
+	margin-bottom: 16px;
+	overflow: hidden;
+	background-color: rgba(249, 249, 249, .8); 
+	
+}
+.desc .sign{
+	background-image: url(../images/Pencil.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 18px 18px;
+	margin-bottom: 16px;
+}
 
+.desc .location{
+	background-image: url(../images/MapMarker.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 18px 18px;
+}
+.desc .tags span{
+	display: inline-block;
+	padding: 9px;
+	margin: 2px;
+	background-color: white;
+	border-radius: 13px;
+	font-size: 14px;
+}
 /* 电脑端导航栏 */
 nav {
 	width: 224px;
@@ -132,9 +186,8 @@ nav {
 	background-color: rgba(249, 249, 249, .8);
 	overflow: auto;
 	padding: 4px 0;
-	top: 27%;
+	top: 28%;
 	position: fixed;
-	float: left;
 }
 
 nav li {
@@ -219,7 +272,7 @@ nav .smallnav a:hover {
 .main-content {
 	margin: 0 auto;
 	margin-left: 264px;
-	margin-right: 20px;
+	margin-right: 264px;
 	margin-top: 95px;
 	margin-bottom: 20px;
 	border-radius: 6px;
@@ -303,7 +356,9 @@ footer {
 	nav {
 		display: none;
 	}
-	
+	.desc{
+		display: none;
+	}
 	.main-content {
 		margin: 0 10px;
 		margin-top: 95px;
@@ -316,5 +371,18 @@ footer {
 	}
 	header .outmenu {
 		display: block;
+	}
+}
+
+
+/* 响应式布局 */
+@media only screen and (max-width:1150px) and (min-width:850px) {
+	.desc{
+		display: none;
+	}
+	.main-content {
+		margin: 0 10px 10px 264px;
+		margin-top: 95px;
+		margin-bottom: 20px;
 	}
 }
