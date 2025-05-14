@@ -1,13 +1,20 @@
 @font-face {
 	font-family: zhajia;
 	src: url(../font/zhajia.ttf);
+
+}
+
+@font-face {
+	font-family: MapleMonoNormal;
+	src: url(../font/MapleMonoNormal-Light.ttf);
+
 }
 
 body {
 	background: url(../images/bg.png) no-repeat fixed;
 	background-size: cover;
 	margin: 0;
-	font-family: Arial, "Microsoft YaHei", sans-serif;
+	font-family: MapleMonoNormal, Arial, "Microsoft YaHei", sans-serif;
 	background-color: #81D0F7;
 }
 
@@ -65,8 +72,8 @@ header .inmenu {
 	background-color: white;
 	z-index: -1;
 	padding-top: 75px;
-	transition:opacity 0.2s ease;
-	transition:height 0.2s ease;
+	transition: opacity 0.2s ease;
+	transition: height 0.2s ease;
 }
 
 header #menu {
@@ -101,7 +108,7 @@ header .inmenu ul {
 }
 
 header .inmenu li {
-	
+
 	list-style: none;
 }
 
@@ -115,14 +122,15 @@ header .inmenu a {
 	line-height: 60px;
 	font-size: 18px;
 }
+
 header .inmenu a:hover {
 	color: white;
 	background-color: #ADE1F5;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-} 
+}
 
 /* 个性化描述 */
-.desc{
+.desc {
 	width: 224px;
 	margin: 20px;
 	border-radius: 6px;
@@ -131,13 +139,15 @@ header .inmenu a:hover {
 	top: 10%;
 	position: fixed;
 }
-.desc p{
+
+.desc p {
 	padding: 0;
 	margin: 0;
 	text-indent: 1.5em;
 	font-size: 14px;
 }
-.desc .tou{
+
+.desc .tou {
 	width: 184px;
 	height: 184px;
 	margin: 20px;
@@ -145,17 +155,19 @@ header .inmenu a:hover {
 	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-.desc .ls,.desc .tags{
+.desc .ls,
+.desc .tags {
 	width: 224px;
 	border-radius: 6px;
 	box-sizing: border-box;
 	padding: 16px;
 	margin-bottom: 16px;
 	overflow: hidden;
-	background-color: rgba(249, 249, 249, .8); 
-	
+	background-color: rgba(249, 249, 249, .8);
+
 }
-.desc .sign{
+
+.desc .sign {
 	background-image: url(../images/Pencil.png);
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -163,13 +175,14 @@ header .inmenu a:hover {
 	margin-bottom: 16px;
 }
 
-.desc .location{
+.desc .location {
 	background-image: url(../images/MapMarker.png);
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	background-size: 18px 18px;
 }
-.desc .tags span{
+
+.desc .tags span {
 	display: inline-block;
 	padding: 9px;
 	margin: 2px;
@@ -177,6 +190,7 @@ header .inmenu a:hover {
 	border-radius: 13px;
 	font-size: 14px;
 }
+
 /* 电脑端导航栏 */
 nav {
 	width: 224px;
@@ -289,6 +303,38 @@ article {
 	box-sizing: border-box;
 }
 
+.pinglun {
+	width: 100%;
+	margin: auto;
+	/* height: 1000px; */
+	background-color: white;
+	padding: 20px;
+	box-sizing: border-box;
+	margin-top: 15px;
+}
+
+.pinglun p input {
+	width: 100%;
+	height: 30px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+.pinglun textarea {
+	width: 100%;
+	box-sizing: border-box;
+	margin: 10px 0;
+}
+
+.pinglun input[type="submit"] {
+	background-color: #81D0F7;
+	width: 100%;
+	height: 40px;
+	color: white;
+	border-radius: 5px;
+	border-width: 0;
+}
+
 article h1 {
 	text-align: center;
 	line-height: 70px;
@@ -301,14 +347,14 @@ article h1 {
 article h2,
 article h3 {
 	font-family: zhajia, Arial, "Microsoft YaHei", sans-serif;
+	font-size: 24px;
 }
 
 article p {
 	line-height: 30px;
 	text-align: justify;
-	font-size: 18px;
-	/* letter-spacing: 0.01em; */
-	color: #444;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.87);
 }
 
 article a {
@@ -319,7 +365,43 @@ article ul {
 	padding-left: 25px;
 }
 
+article .img {
+	text-align: center;
+}
 
+article img {
+	width: 100%;
+	border-radius: 6px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article .img p {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+article .img:hover img {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+article table {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1PX 3px rgba(0, 0, 0, 0.2);
+	border-collapse: collapse;
+}
+
+article table th {
+	text-align: left;
+	padding: 15px;
+	color: rgba(0, 0, 0, 0.54);
+}
+
+article table td {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 15px;
+}
 
 /* 返回顶部 */
 .top {
@@ -356,19 +438,22 @@ footer {
 	nav {
 		display: none;
 	}
-	.desc{
+
+	.desc {
 		display: none;
 	}
+
 	.main-content {
 		margin: 0 10px;
 		margin-top: 95px;
 		margin-bottom: 20px;
 	}
-	
-	
+
+
 	article p {
 		font-size: 16px;
 	}
+
 	header .outmenu {
 		display: block;
 	}
@@ -377,9 +462,10 @@ footer {
 
 /* 响应式布局 */
 @media only screen and (max-width:1150px) and (min-width:850px) {
-	.desc{
+	.desc {
 		display: none;
 	}
+
 	.main-content {
 		margin: 0 10px 10px 264px;
 		margin-top: 95px;
