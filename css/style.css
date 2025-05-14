@@ -294,6 +294,9 @@ nav .smallnav a:hover {
 	padding: 20px;
 }
 
+
+
+/* 文章及评论 */
 article {
 	width: 100%;
 	margin: auto;
@@ -310,7 +313,7 @@ article {
 	background-color: white;
 	padding: 20px;
 	box-sizing: border-box;
-	margin-top: 8px;
+	margin-top: 10px;
 }
 
 .pinglun p input {
@@ -348,6 +351,7 @@ article h2,
 article h3 {
 	font-family: zhajia, Arial, "Microsoft YaHei", sans-serif;
 	font-size: 24px;
+	color: #81D0F7;
 }
 
 article p {
@@ -379,6 +383,8 @@ article .img p {
 	text-align: center;
 	padding: 0;
 	margin: 0;
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 13px;
 }
 
 article .img:hover img {
