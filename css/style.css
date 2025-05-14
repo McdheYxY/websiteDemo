@@ -265,19 +265,19 @@ nav .smallnav a:hover {
 }
 
 .circle {
-	background: url(../images/Circle.png);
+	background: url(../images/MdiLightAccount.png);
 }
 
 .hexagon {
-	background: url(../images/Hexagon.png);
+	background: url(../images/MdiLightBank.png);
 }
 
 .rhombus {
-	background: url(../images/Rhombus.png);
+	background: url(../images/MdiLightShapeRhombus.png);
 }
 
 .triangle {
-	background: url(../images/Triangle.png);
+	background: url(../images/MdiLightBook.png);
 }
 
 
@@ -356,6 +356,7 @@ article h3 {
 
 article p {
 	line-height: 30px;
+	text-indent: 2em;
 	text-align: justify;
 	font-size: 16px;
 	color: rgba(0, 0, 0, 0.87);
@@ -373,10 +374,16 @@ article .img {
 	text-align: center;
 }
 
-article img {
-	width: 100%;
+article .img img {
 	border-radius: 6px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	
+}
+.width100{
+	width: 100%;
+}
+.width80{
+	width: 80%;
 }
 
 article .img p {
@@ -388,7 +395,7 @@ article .img p {
 }
 
 article .img:hover img {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 article table {
